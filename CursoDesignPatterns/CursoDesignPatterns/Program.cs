@@ -48,22 +48,42 @@ namespace CursoDesignPatterns
                         double desconto = calculador.Calcula(orcamento);
 
                         Console.WriteLine(desconto);*/
+            /*
+                        Conta conta = new Conta("Artur Dent");
+                        conta.Deposita(969.0);
 
-            Conta conta = new Conta("Artur Dent");
-            conta.Deposita(969.0);
+                        Requisicao requisicao = new Requisicao(Formato.CSV);
+                        Resposta r1 = new RespostaEmCsv();
+                        Resposta r2 = new RespostaXML();
+                        Resposta r3 = new RespostaEmPorcento();
+                        Resposta r4 = new SemFormato();
 
-            Requisicao requisicao = new Requisicao(Formato.CSV);
-            Resposta r1 = new RespostaEmCsv();
-            Resposta r2 = new RespostaXML();
-            Resposta r3 = new RespostaEmPorcento();
-            Resposta r4 = new SemFormato();
+                        r1.OutraResposta = r2;
+                        r2.OutraResposta = r3;
+                        r3.OutraResposta = r4;
 
-            r1.OutraResposta = r2;
-            r2.OutraResposta = r3;
-            r3.OutraResposta = r4;
+                        r1.Responde(requisicao, conta);*/
 
-            r1.Responde(requisicao, conta);
+            Conta c1 = new Conta("Artur Dent");
+            c1.Deposita(969.0);
 
+            Conta c2 = new Conta("Ford");
+            c2.Deposita(5.66);
+
+            Conta c3 = new Conta("Zhanphord");
+            c3.Deposita(964841889.32);
+
+            TemplateRelatorio RSimples = new RelatorioSimples();
+            TemplateRelatorio RComplexo = new RelatorioComplexos();
+
+            IList<Conta> contas = new List<Conta>();
+
+            contas.Add(c1);
+            contas.Add(c2);
+            contas.Add(c3);
+
+            RSimples.Imprimir(contas);
+            RComplexo.Imprimir(contas);
 
 
             Console.ReadKey();

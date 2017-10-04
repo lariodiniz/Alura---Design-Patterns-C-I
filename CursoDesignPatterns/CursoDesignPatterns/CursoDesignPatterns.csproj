@@ -52,8 +52,13 @@
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
     <Compile Include="EstrategiaDeInvestimento.cs" />
+    <Compile Include="ICPP.cs" />
+    <Compile Include="IHIT.cs" />
+    <Compile Include="IKCV.cs" />
+    <Compile Include="RelatorioComplexos.cs" />
+    <Compile Include="RelatorioSimples.cs" />
     <Compile Include="RespostaEmCsv.cs" />
-    <Compile Include="FormatoPorcento.cs" />
+    <Compile Include="RespostaEmPorcento.cs" />
     <Compile Include="Resposta.cs" />
     <Compile Include="RespostaXML.cs" />
     <Compile Include="ICCC.cs" />
@@ -69,6 +74,8 @@
     <Compile Include="Requisição.cs" />
     <Compile Include="SemDesconto.cs" />
     <Compile Include="SemFormato.cs" />
+    <Compile Include="TemplateDeImpostoCondicional.cs" />
+    <Compile Include="TemplateRelatorio.cs" />
     <Compile Include="TestaCorrente.cs" />
   </ItemGroup>
   <ItemGroup>
