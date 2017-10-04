@@ -84,14 +84,42 @@ namespace CursoDesignPatterns
 
                         RSimples.Imprimir(contas);
                         RComplexo.Imprimir(contas);*/
+            /*
+                        Imposto iss = new ISS(new ImpostoMuitoAlto());
+                        Orcamento orcamento = new Orcamento(500);
+                        double valor = iss.Calcula(orcamento);
 
-            Imposto iss = new ISS(new ImpostoMuitoAlto());
-            Orcamento orcamento = new Orcamento(500);
-            double valor = iss.Calcula(orcamento);
+                        Console.WriteLine(valor);
+                        */
+            /*
+Orcamento reforma = new Orcamento(500);
+Console.WriteLine(reforma.Valor);
+reforma.AplicaDescontoExtra();
+reforma.AplicaDescontoExtra();
+Console.WriteLine(reforma.Valor);
 
-            Console.WriteLine(valor);
+reforma.Aprova();
 
+reforma.AplicaDescontoExtra();
+Console.WriteLine(reforma.Valor);
 
+reforma.Finaliza();*/
+
+            Conta c1 = new Conta("Artur Dent");
+            c1.Deposita(100);
+
+            Console.WriteLine(c1.Status.ToString());
+            Console.WriteLine(c1.Saldo);
+
+            c1.Saca(99);
+
+            Console.WriteLine(c1.Status.ToString());
+            Console.WriteLine(c1.Saldo);
+
+            c1.Deposita(100);
+
+            Console.WriteLine(c1.Status.ToString());
+            Console.WriteLine(c1.Saldo);
 
             Console.ReadKey();
         }
