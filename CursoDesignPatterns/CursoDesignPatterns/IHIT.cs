@@ -9,6 +9,13 @@ namespace CursoDesignPatterns
 {
     public class IHIT : TemplateDeImpostoCondicional
     {
+        public IHIT(Imposto outroImposto) : base(outroImposto)
+        {
+        }
+
+        public IHIT() : base()
+        {
+        }
 
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {

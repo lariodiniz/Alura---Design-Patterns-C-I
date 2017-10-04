@@ -10,6 +10,8 @@ namespace CursoDesignPatterns
     {
         public double Saldo { get; private set; }
         public string Titular { get; private set; }
+        public DateTime DataAbertura { get; private set; }
+
         public void Deposita(double valor)
         {
             this.Saldo += valor;
@@ -18,6 +20,7 @@ namespace CursoDesignPatterns
         public Conta(string titular)
         {
             this.Titular = titular;
+            this.DataAbertura = DateTime.Now;
         }
     }
 }

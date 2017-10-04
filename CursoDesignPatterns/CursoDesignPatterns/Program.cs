@@ -63,27 +63,34 @@ namespace CursoDesignPatterns
                         r3.OutraResposta = r4;
 
                         r1.Responde(requisicao, conta);*/
+            /*
+                        Conta c1 = new Conta("Artur Dent");
+                        c1.Deposita(969.0);
 
-            Conta c1 = new Conta("Artur Dent");
-            c1.Deposita(969.0);
+                        Conta c2 = new Conta("Ford");
+                        c2.Deposita(5.66);
 
-            Conta c2 = new Conta("Ford");
-            c2.Deposita(5.66);
+                        Conta c3 = new Conta("Zhanphord");
+                        c3.Deposita(964841889.32);
 
-            Conta c3 = new Conta("Zhanphord");
-            c3.Deposita(964841889.32);
+                        TemplateRelatorio RSimples = new RelatorioSimples();
+                        TemplateRelatorio RComplexo = new RelatorioComplexos();
 
-            TemplateRelatorio RSimples = new RelatorioSimples();
-            TemplateRelatorio RComplexo = new RelatorioComplexos();
+                        IList<Conta> contas = new List<Conta>();
 
-            IList<Conta> contas = new List<Conta>();
+                        contas.Add(c1);
+                        contas.Add(c2);
+                        contas.Add(c3);
 
-            contas.Add(c1);
-            contas.Add(c2);
-            contas.Add(c3);
+                        RSimples.Imprimir(contas);
+                        RComplexo.Imprimir(contas);*/
 
-            RSimples.Imprimir(contas);
-            RComplexo.Imprimir(contas);
+            Imposto iss = new ISS(new ImpostoMuitoAlto());
+            Orcamento orcamento = new Orcamento(500);
+            double valor = iss.Calcula(orcamento);
+
+            Console.WriteLine(valor);
+
 
 
             Console.ReadKey();

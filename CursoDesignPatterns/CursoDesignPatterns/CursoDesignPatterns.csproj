@@ -52,9 +52,14 @@
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
     <Compile Include="EstrategiaDeInvestimento.cs" />
+    <Compile Include="Filtro.cs" />
+    <Compile Include="FiltroDataDeAberturaMesCorrente.cs" />
+    <Compile Include="FiltroSaldoMaior500.cs" />
+    <Compile Include="FiltroSaldoMenor100.cs" />
     <Compile Include="ICPP.cs" />
     <Compile Include="IHIT.cs" />
     <Compile Include="IKCV.cs" />
+    <Compile Include="ImpostoMuitoAlto.cs" />
     <Compile Include="RelatorioComplexos.cs" />
     <Compile Include="RelatorioSimples.cs" />
     <Compile Include="RespostaEmCsv.cs" />

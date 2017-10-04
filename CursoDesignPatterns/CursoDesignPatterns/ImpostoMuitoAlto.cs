@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    public class ISS : TemplateDeImpostoCondicional
+    class ImpostoMuitoAlto : TemplateDeImpostoCondicional
     {
-        public ISS(Imposto outroImposto) : base(outroImposto)
+
+        public ImpostoMuitoAlto(Imposto outroImposto) : base(outroImposto)
         {
         }
 
-        public ISS() : base()
+        public ImpostoMuitoAlto() : base()
         {
         }
 
@@ -23,7 +24,7 @@ namespace CursoDesignPatterns
 
         public override double MaximaTaxacao(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.06 + CalculoDoOutroImposto(orcamento);
+            return orcamento.Valor * 0.2 + CalculoDoOutroImposto(orcamento);
         }
 
         public override double MinimaTaxacao(Orcamento orcamento)

@@ -6,15 +6,29 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    public class ICCC : Imposto
+    public class ICCC : TemplateDeImpostoCondicional
     {
-        public double Calcula(Orcamento orcamento)
+        public ICCC(Imposto outroImposto) : base(outroImposto)
         {
-            if (orcamento.Valor < 1000)
-            {
-                return orcamento.Valor * 0.05;
-            }
-            else if(orcamento.Valor >= 1000 && orcamento.Valor <= 3000)
+        }
+
+        public ICCC() : base()
+        {
+        }
+
+        public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
+        {
+            return orcamento.Valor < 1000;
+        }
+
+        public override double MaximaTaxacao(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.05;
+        }
+
+        public override double MinimaTaxacao(Orcamento orcamento)
+        {
+            if (orcamento.Valor >= 1000 && orcamento.Valor <= 3000)
             {
                 return orcamento.Valor * 0.07;
             }
@@ -22,7 +36,6 @@ namespace CursoDesignPatterns
             {
                 return orcamento.Valor * 0.08 + 30;
             }
-
         }
     }
 }
