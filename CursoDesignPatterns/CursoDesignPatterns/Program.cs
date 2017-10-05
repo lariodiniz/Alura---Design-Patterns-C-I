@@ -136,10 +136,14 @@ reforma.Finaliza();*/
             NotaFiscalBuilder criador = new NotaFiscalBuilder();
             criador.ParaEmpresa("Caelum Ensino e Inovação")
             .ComCnpj("23.456.789/0001-12")
-            .ComItem(new ItemDaNota("item 1", 100.0))
-            .ComItem(new ItemDaNota("item 2", 200.0))
-            .NaDataAtual()
+            .Com(new ItemDaNota("item 1", 100.0))
+            .Com(new ItemDaNota("item 2", 200.0))            
             .ComObservacoes("uma obs qualquer");
+
+            criador.AdicionaAcao(new EnviadorDeEmail());
+            criador.AdicionaAcao(new NotaFiscalDAO());
+            criador.AdicionaAcao(new EnviadorDeSMS());
+            criador.AdicionaAcao(new Multiplicador(2));            
 
             NotaFiscal nf = criador.Constroi();
 
