@@ -48,6 +48,7 @@
     <Compile Include="CalculadorDeImpostos.cs" />
     <Compile Include="Conservador.cs" />
     <Compile Include="Conta.cs" />
+    <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="Desconto.cs" />
     <Compile Include="DescontoPorMaisDeQuinhentosReais.cs" />
     <Compile Include="DescontoPorCincoItens.cs" />
@@ -65,7 +66,9 @@
     <Compile Include="IHIT.cs" />
     <Compile Include="IKCV.cs" />
     <Compile Include="ImpostoMuitoAlto.cs" />
+    <Compile Include="ItemDaNota.cs" />
     <Compile Include="Negativo.cs" />
+    <Compile Include="NotaFiscal.cs" />
     <Compile Include="Positivo.cs" />
     <Compile Include="RelatorioComplexos.cs" />
     <Compile Include="RelatorioSimples.cs" />

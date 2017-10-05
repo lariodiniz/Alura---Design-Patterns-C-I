@@ -104,22 +104,47 @@ reforma.AplicaDescontoExtra();
 Console.WriteLine(reforma.Valor);
 
 reforma.Finaliza();*/
+            /*
+                        Conta c1 = new Conta("Artur Dent");
+                        c1.Deposita(100);
 
-            Conta c1 = new Conta("Artur Dent");
-            c1.Deposita(100);
+                        Console.WriteLine(c1.Status.ToString());
+                        Console.WriteLine(c1.Saldo);
 
-            Console.WriteLine(c1.Status.ToString());
-            Console.WriteLine(c1.Saldo);
+                        c1.Saca(99);
 
-            c1.Saca(99);
+                        Console.WriteLine(c1.Status.ToString());
+                        Console.WriteLine(c1.Saldo);
 
-            Console.WriteLine(c1.Status.ToString());
-            Console.WriteLine(c1.Saldo);
+                        c1.Deposita(100);
 
-            c1.Deposita(100);
+                        Console.WriteLine(c1.Status.ToString());
+                        Console.WriteLine(c1.Saldo);*/
+            /*  IList<ItemDaNota> itens = new List<ItemDaNota>();
 
-            Console.WriteLine(c1.Status.ToString());
-            Console.WriteLine(c1.Saldo);
+              double valorTotal = 0;
+
+              foreach (ItemDaNota item in itens)
+              {
+                  valorTotal += item.Valor;
+              }
+
+              double impostos = valorTotal + 0.05;
+
+              NotaFiscal nf = new NotaFiscal("razão", "cnpj", DateTime.Now, valorTotal, impostos, itens, "obs qualquer");*/
+
+            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador.ParaEmpresa("Caelum Ensino e Inovação")
+            .ComCnpj("23.456.789/0001-12")
+            .ComItem(new ItemDaNota("item 1", 100.0))
+            .ComItem(new ItemDaNota("item 2", 200.0))
+            .NaDataAtual()
+            .ComObservacoes("uma obs qualquer");
+
+            NotaFiscal nf = criador.Constroi();
+
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
 
             Console.ReadKey();
         }
